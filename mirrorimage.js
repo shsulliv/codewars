@@ -25,7 +25,7 @@ var mirrorImage = (arr) => {
     (x, i) => {
       a = arr[i]; //or a=x
       b = arr[i + 1];
-      return a === +('' + arr[i + 1]).reverse();
+      return a === +('' + b).reverse();
     }
   );
 
