@@ -70,6 +70,25 @@ function countGrade(scores) {
   return tally;
 }
 
-console.log(countGrade([50, 60, 70, 80, 90, 100]));
-console.log(countGrade([65, 75, , 85, 85, 95, 100, 100]));
-console.log(countGrade([-1, -1, -1, -1, -1, -1]));
+// REFACTOR 2
+
+const rules = [
+  ['S', (x) => x === 100],
+  ['A', (x) => x < 100 && x >= 90],
+  ['B', (x) => x < 90 && x >= 80],
+  ['C', (x) => x < 80 && x >= 60],
+  ['D', (x) => x < 60 && x >= 0],
+  ['X', (x) => x === -1]
+]
+
+function countGrade(scores) {
+  const tally = rules.map((r) => ({
+      [r[0]]: scores.filter(r[1]).length
+    })
+
+    return Object.assign({}, ...tally)
+  }
+
+  console.log(countGrade([50, 60, 70, 80, 90, 100]));
+  console.log(countGrade([65, 75, , 85, 85, 95, 100, 100]));
+  console.log(countGrade([-1, -1, -1, -1, -1, -1]));
