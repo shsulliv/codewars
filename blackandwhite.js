@@ -30,7 +30,7 @@ var blackAndWhite = (arr) => {
 
 // REFACTOR
 
-const blackAndWhite = arr => `It's a ${Array.isArray(arr) ? arr.indexOf(5) > -1 && arr.indexOf(13) > -1 ? 'black' : 'white' : 'fake'} array`
+const blackAndWhite = arr => `It's a ${Array.isArray(arr) ? arr.indexOf(5) > -1 && arr.indexOf(13) > -1 ? 'black' : 'white' : 'fake'} array`;
 
 console.log(blackAndWhite(5, 13));
 console.log(blackAndWhite([5, 13]));
