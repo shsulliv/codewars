@@ -31,7 +31,7 @@ const rndCode = () => {
   }
 
   for (let i = 0; i < 2; i++) {
-    code.push(Math.floor(100*Math.random()));
+    code.push(Math.floor(Math.random() * (99 - 10 + 1) + 10));
   }
 
   for (let i = 0; i < 2; i++) {
