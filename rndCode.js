@@ -30,8 +30,8 @@ const rndCode = () => {
     code.push(range.letters[Math.floor(range.letters.length * Math.random())]);
   }
 
-  for (let i = 0; i < 2; i++) {
-    code.push(Math.floor(Math.random() * (99 - 10 + 1) + 10));
+  for (let i = 0; i < 4; i++) {
+    code.push(Math.floor(Math.random() * 10));
   }
 
   for (let i = 0; i < 2; i++) {
